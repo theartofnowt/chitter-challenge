@@ -1,0 +1,21 @@
+<div id='chitterfeed'>
+
+  <table width="50%">
+    <tr>
+      <th width="70%">Peep</th>
+       <th>Time created</th>
+       <th>User</th>
+     </tr>
+     <% @peeps.each do |peep| %>
+     <% time = peep.created_at.strftime("%r") %>
+     <% date = "(#{peep.created_at.strftime('%x')})" %>
+     <% datenow = "(#{Time.now.strftime('%x')})" %>
+     <tr>
+       <td><%= peep.body %></td>
+        <td><%= time %> <em><%="#{(date unless date == datenow )}" %></em></td>
+       <td>(Username)</td>
+     </tr>
+     <% end %>
+   </table>
+
+</div>
