@@ -24,7 +24,5 @@ class Chitter < Sinatra::Base
         erb(:peep_new)
       end
 
-    end
-
 
   end
