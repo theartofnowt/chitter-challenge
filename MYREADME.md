@@ -41,6 +41,11 @@ I want to receive an email if I am tagged in a Peep
 ----------------------
 screen shots of progress using localhost:
 
+![screen shot 2017-08-06 at 14 38 30](https://user-images.githubusercontent.com/25685164/29007299-b90c3d4c-7af7-11e7-82fd-01122bd4b32d.png)
+
+![screen shot 2017-08-06 at 14 43 35](https://user-images.githubusercontent.com/25685164/29007300-bd7f0788-7af7-11e7-8744-d989bfbedc2c.png)
+
+![screen shot 2017-08-06 at 22 38 43](https://user-images.githubusercontent.com/25685164/29007318-3f2d9ff6-7af8-11e7-93a4-1b32c17a93dc.png)
 
 
 * I tried to hand write my own css, instead of using bootstrap. I would like to know how to use css better.
