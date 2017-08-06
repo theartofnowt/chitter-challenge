@@ -6,6 +6,9 @@ gem 'dm-postgres-adapter'
 gem 'sinatra'
 gem 'dm-validations'
 gem 'dm-timestamps'
+gem 'bcrypt'
+gem 'rake'
+gem 'sinatra-flash'
 
 
 group :test do
@@ -13,7 +16,6 @@ group :test do
   gem 'database_cleaner'
   gem 'cucumber'
   gem 'rspec'
-  gem 'rake'
   gem 'rubocop'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false

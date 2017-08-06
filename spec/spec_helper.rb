@@ -5,7 +5,10 @@ require 'simplecov-console'
 require 'simplecov'
 require 'database_cleaner'
 require 'capybara/rspec'
-require_relative '../app/app'
+require 'data_mapper'#
+require 'dm-postgres-adapter'#
+require_relative '../app/app'#
+require './spec/features/helpers.rb'#
 
 Capybara.app = Chitter
 
@@ -14,7 +17,8 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
 
 SimpleCov.start
 
-DataMapper.auto_upgrade!
+# DataMapper.auto_upgrade!
+DataMapper.auto_migrate!
 
 RSpec.configure do |config|
 

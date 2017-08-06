@@ -14,12 +14,14 @@ require './app/app.rb'
 
    desc "non descructive upgrade"
    task :upgrade do
+     DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/chitter_challenge_#{ENV['database']}")
      DataMapper.auto_upgrade!
      puts "Database upgraded!"
    end
 
    desc "descructive upgrade"
    task :migrate do
+     DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/chitter_challenge_#{ENV['database']}")
      DataMapper.auto_migrate!
      puts "Database migrated!"
    end

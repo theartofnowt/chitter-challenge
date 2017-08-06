@@ -1,14 +1,57 @@
 
  <html>
+
    <head>
      <title>Chitter</title>
+     <link rel="stylesheet" type="text/css" href="/assets/stylesheet.css">
    </head>
+
    <body>
-     <div id='Headline'>
-       <h1>Chitter</h1>
-     </div>
+
+    </div>
+
+     <div id='headline'>
+
+       <table width="50%" height="200">
+          <tr class="nohover">
+            <td width="70%">
+              <h1><img src="img/chitter.png" alt=""></h1>
+            </td>
+            <td>
+              <% if @user %>
+                <div id='loggedin'>
+
+                  <%= "Logged in as #{@user.email}"%>
+                  <br>
+                  <form action="/logout" method="get">
+                    <input type="submit" class="button" value="logout"/>
+                  </form>
+
+                </div>
+              <% end %>
+
+              <% unless @user %>
+                <div id='loggedout'>
+
+                  <form action="/users" method="get">
+                    <input type="submit" class="button" value="login"/>
+                  </form>
+                  <form action="/users/new" method="get">
+                    <input type="submit" class="button" value="sign up"/>
+                  </form>
+
+                </div>
+              <% end %>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+
      <div id='main'>
        <%= yield %>
      </div>
+
    </body>
+
  </html>
